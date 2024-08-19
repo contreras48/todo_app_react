@@ -61,10 +61,13 @@ button {
     justify-content: space-between;
   }
 
-  &>div>button {
+  &>div>.btn-switch {
     font-size: 1.1em;
+    color: white;
   }
 }
+
+
 
 .app-main {
   background-color: var(--bg-body);
