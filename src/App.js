@@ -49,7 +49,7 @@ function App() {
   }
 
   const clearComplete = () => {
-    setItems(items.find(i => i.complete !== false))
+    setItems(items.filter(i => i.complete === false))
   }
 
 
