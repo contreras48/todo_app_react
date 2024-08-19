@@ -3,18 +3,18 @@ import Todoitem from './Todoitem'
 
 function Todolist ({ items, updateItems, updateItem, deleteItem, selectedFilter, updateFilter, clearComplete }){
 
-  const itemsList = selectedFilter === 'all' ? items : items.filter(i => i.complete === (selectedFilter === 'active'))
-
-  /* const list = () => {
+  const itemsList = (() => {
     switch(selectedFilter){
       case 'all':
         return items;
       case 'active':
-        return items.find(i => i.complete === false)
+        return items.find(i => i.complete === false);
       case 'complete':
-        return items.find(i => i.complete === true)
+        return items.find(i => i.complete === true);
+      default:
+        return items;
     }
-  } */
+  })();
 
   const rederList = itemsList.map(item => {
     return (
