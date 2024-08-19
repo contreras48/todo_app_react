@@ -3,7 +3,7 @@ import Todoitem from './Todoitem'
 
 function Todolist ({ items, updateItems, updateItem, deleteItem, selectedFilter, updateFilter, clearComplete }){
 
-  const itemsList = selectedFilter === 'all' ? items : items.find(i => i.complete === (selectedFilter === 'active'))
+  const itemsList = selectedFilter === 'all' ? items : items.filter(i => i.complete === (selectedFilter === 'active'))
 
   /* const list = () => {
     switch(selectedFilter){
