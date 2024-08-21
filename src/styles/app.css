@@ -83,7 +83,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.28);
 
   & input[type="text"] {
     width: 100%;
@@ -92,6 +91,7 @@ button {
     padding-inline: 10px;
     outline: none;
     font-size: 1.1em;
+    border: none;
   }
 
   &>div {
@@ -103,6 +103,14 @@ button {
 }
 
 .app-list {
+  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.28);
+}
+
+input[type="text"] {
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.28);
+}
+
+.app-filter {
   display: flex;
   flex-direction: row;
   align-items: center;

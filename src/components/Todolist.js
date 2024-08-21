@@ -29,8 +29,8 @@ function Todolist ({ items, updateItems, updateItem, deleteItem, selectedFilter,
   }
 
   return (
-    <div>
-      <div className='app-list'>
+    <div className='app-list'>
+      <div className='app-filter'>
         <span>{getItemsLeft()}</span>
         <Filter updateFilter={updateFilter} selectedFilter={selectedFilter}/>
         <span onClick={clearComplete}>Limpíar</span>
