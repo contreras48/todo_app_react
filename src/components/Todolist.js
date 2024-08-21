@@ -8,9 +8,9 @@ function Todolist ({ items, updateItems, updateItem, deleteItem, selectedFilter,
       case 'all':
         return items;
       case 'active':
-        return items.find(i => i.complete === false);
-      case 'complete':
-        return items.find(i => i.complete === true);
+        return items.filter(i => i.complete === false);
+      case 'completed':
+        return items.filter(i => i.complete === true);
       default:
         return items;
     }
