@@ -18,7 +18,6 @@
 .dark-mode {
   --bg-header: #c4544a;
   --bg-body: #252525;
-  ;
   --bg: #282c34;
   --text-color-header: white;
   --text-color: 282c34;
@@ -116,31 +115,41 @@ input[type="text"] {
   align-items: center;
   justify-content: space-between;
   font-size: 0.9em;
+  margin-bottom: 15px;
 
   &>.filter {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 15px;
-    font-size: 1em;
+
+    & .selected {
+      color: #0615ee;
+    }
+  }
+
+  & .filter-option {
+    font-size: 0.95em;
   }
 }
 
 ul {
   list-style: none;
   padding: 0;
-  font-size: 1.5em;
+  font-size: 1.1em;
 
   & li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5px;
   }
 
-  & li>label>input[type="checkbox"] {
+  & li input[type="checkbox"] {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
   }
 
   & li:hover>.icon-delete {
@@ -160,10 +169,6 @@ ul {
   to {
     transform: rotate(360deg);
   }
-}
-
-.active {
-  color: #61dafb;
 }
 
 .icon-delete {
