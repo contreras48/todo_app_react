@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
+  transition: background-color .5s ease;
 }
 
 :root {
@@ -12,17 +13,17 @@
   --text-color-header: white;
   --text-color: #282c34;
   --text-active: #61dafb;
-  --delete-icon: #e98484;
+  --delete-icon: #c4544a;
 }
 
 .dark-mode {
-  --bg-header: #c4544a;
+  --bg-header: #8c3a35;
   --bg-body: #252525;
   --bg: #282c34;
   --text-color-header: white;
-  --text-color: 282c34;
+  --text-color: white;
   --text-active: #61dafb;
-  --delete-icon: #e98484;
+  --delete-icon: #8c3a35;
 }
 
 .app-logo {
@@ -71,6 +72,7 @@ button {
 .app-main {
   background-color: var(--bg-body);
   height: 60vh;
+  color: var(--text-color);
 }
 
 .app-container {
@@ -91,6 +93,8 @@ button {
     outline: none;
     font-size: 1.1em;
     border: none;
+    background-color: var(--bg);
+    color: var(--text-color);
   }
 
   &>div {
@@ -124,11 +128,12 @@ input[type="text"] {
     gap: 15px;
 
     & .selected {
-      color: #0615ee;
+      color: var(--text-active);
     }
   }
 
   & .filter-option {
+    color: var(--text-color);
     font-size: 0.95em;
   }
 }

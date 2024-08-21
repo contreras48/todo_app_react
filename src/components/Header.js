@@ -3,7 +3,7 @@ import { IoMdSunny, IoMdMoon } from "react-icons/io";
 
 function Header({ theme, toggleTheme }) {
   return (
-    <header className='app-header'>
+    <header className={theme == 'dark' ? "app-header dark-mode" : "app-header"}>
       <div>
         <h2>TODO APP</h2>
         <button aria-label="Switch Theme" className="btn-switch" onClick={() => toggleTheme()}>

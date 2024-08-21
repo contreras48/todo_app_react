@@ -56,7 +56,7 @@ function App() {
 
   return (
     <>
-      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Header className={theme == 'dark' ? "dark-mode" : ""} theme={theme} toggleTheme={toggleTheme} />
       <main className={theme == 'dark' ? "app-main dark-mode" : "app-main"}>
         <section className='app-container'>
           <Form addItem={addItem} nextId={nextId} />
